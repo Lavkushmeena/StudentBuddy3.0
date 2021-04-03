@@ -1,4 +1,4 @@
-package com.example.registration;
+package com.nitukbt19.StudentBuddy;
 
 import org.junit.Test;
 
