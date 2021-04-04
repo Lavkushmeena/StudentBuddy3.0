@@ -32,6 +32,12 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setTitle("Creating Account");
         progressDialog.setMessage("Welcome Back");
 
+        binding.tvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+            }
+        });
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
-                //need register intent startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });
         if(mauth.getCurrentUser()!=null){

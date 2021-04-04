@@ -39,6 +39,12 @@ public class RegisterActivity extends AppCompatActivity {
         progressDialog=new ProgressDialog(RegisterActivity.this);
         progressDialog.setTitle("Creating Account");
         progressDialog.setMessage("Welcome "+binding.inputUsername.getText().toString());
+        binding.alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+            }
+        });
         binding.btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,8 +74,6 @@ public class RegisterActivity extends AppCompatActivity {
                     binding.inputConfirmPassword1.setHintTextColor(Color.RED);
                 }
 
-
-                // for main Activity startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
             }
         });
 
