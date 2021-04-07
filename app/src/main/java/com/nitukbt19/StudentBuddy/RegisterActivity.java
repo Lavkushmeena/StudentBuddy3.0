@@ -38,8 +38,9 @@ public class RegisterActivity extends AppCompatActivity {
         binding.alreadyHaveAccount.setOnClickListener(view -> {
             Intent i=new Intent(RegisterActivity.this,LoginActivity.class);
             startActivity(i);
+            finish();
         });
-        //disabling button till all inputs are entered
+        //disabling Register button till all inputs are entered
         binding.btnRegister.setEnabled(false);
         binding.inputConfirmPassword1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -49,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(charSequence.toString().length()>3&&binding.inputPasswordRegister2.getText().toString().length()>3){
+                if(charSequence.toString().length()>3){
                     binding.btnRegister.setEnabled(true);
                 }
             }
@@ -73,6 +74,8 @@ public class RegisterActivity extends AppCompatActivity {
                                 String id=task.getResult().getUser().getUid();
                                 database.getReference().child("Users").child(id).setValue(user);
                                 Toast.makeText(RegisterActivity.this, "Successfully Registered in Student Buddy", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                                finish();
                             } else {
                                 Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
