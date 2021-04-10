@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         binding=ActivityLoginBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
 
         mAuth = FirebaseAuth.getInstance();
 

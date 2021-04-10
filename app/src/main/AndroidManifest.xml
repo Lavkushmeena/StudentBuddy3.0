@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Registration">
-        <activity android:name="com.nitukbt19.StudentBuddy.RegisterActivity" />
-        <activity android:name="com.nitukbt19.StudentBuddy.LoginActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".ManageContact"
+            android:label="@string/title_activity_manage_contact"
+            android:theme="@style/Theme.Registration.NoActionBar"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name="com.nitukbt19.StudentBuddy.MainActivity">
-
-        </activity>
-
-
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
