@@ -10,8 +10,8 @@ import java.util.List;
 
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private final List<Fragment> lstFragment =new ArrayList<>();
-    private final List<String> lstTitle =new ArrayList<>();
+    private final List<Fragment> lstFragment =new ArrayList<>(1);
+    private final List<String> lstTitle =new ArrayList<>(1);
 
     public ViewPagerAdapter(@NonNull FragmentManager fm){
         super(fm);
